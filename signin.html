@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up — Green Pakistan</title>
+    <title>Sign In — Green Pakistan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
@@ -105,27 +105,27 @@
       </div>
     </header>
 
-    <!-- SIGNUP -->
+    <!-- SIGN IN -->
     <section
       class="items-center gap-16 grid lg:grid-cols-2 mx-auto px-6 lg:px-10 py-16 lg:py-24 max-w-7xl"
     >
-      <!-- Left: pitch + illustration -->
+      <!-- Left: welcome back + illustration -->
       <div class="hidden lg:block">
         <span
           class="inline-flex items-center gap-2 bg-leaf-100 px-3.5 py-1.5 rounded-full font-semibold text-leaf-500 text-xs"
         >
           <span class="bg-leaf-500 rounded-full w-1.5 h-1.5"></span>
-          Join 9,100+ volunteers
+          Welcome back
         </span>
         <h1
           class="mt-6 font-extrabold text-skyblue-700 text-4xl leading-[1.15]"
         >
-          Create your account,<br />
-          plant your first tree.
+          Good to see you<br />
+          again.
         </h1>
         <p class="mt-5 max-w-sm text-forest-800/75 leading-relaxed">
-          Sign up to report bare spots, join planting drives near you, and track
-          every sapling you help grow.
+          Sign in to check your planting drives, track saplings you've helped
+          grow, and find new spots near you.
         </p>
 
         <svg viewBox="0 0 420 300" class="mt-12 w-full max-w-sm h-auto">
@@ -164,49 +164,14 @@
 
       <!-- Right: form card -->
       <div
-        class="bg-white shadow-forest-900/5 shadow-xl p-8 sm:p-10 border border-leaf-300/50 rounded-3xl"
+        class="bg-white shadow-forest-900/5 shadow-xl mx-auto lg:mx-0 p-8 sm:p-10 border border-leaf-300/50 rounded-3xl w-full max-w-md"
       >
-        <h2 class="font-bold text-skyblue-700 text-2xl">
-          Sign up to volunteer
-        </h2>
+        <h2 class="font-bold text-skyblue-700 text-2xl">Sign in</h2>
         <p class="mt-1.5 text-forest-800/70 text-sm">
-          It takes less than a minute.
+          Enter your details to continue.
         </p>
 
-        <form id="signupForm" class="space-y-5 mt-8" novalidate>
-          <div class="gap-5 grid sm:grid-cols-2">
-            <div>
-              <label
-                for="fullName"
-                class="block mb-1.5 font-semibold text-forest-900 text-sm"
-                >Full name</label
-              >
-              <input
-                id="fullName"
-                name="fullName"
-                type="text"
-                required
-                placeholder="Ayesha Khan"
-                class="px-4 py-3 border border-leaf-300/70 focus:border-leaf-500 rounded-xl focus:outline-none focus:ring-4 focus:ring-leaf-400/30 w-full transition-shadow"
-              />
-            </div>
-            <div>
-              <label
-                for="phone"
-                class="block mb-1.5 font-semibold text-forest-900 text-sm"
-                >Phone number</label
-              >
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                required
-                placeholder="03xx-xxxxxxx"
-                class="px-4 py-3 border border-leaf-300/70 focus:border-leaf-500 rounded-xl focus:outline-none focus:ring-4 focus:ring-leaf-400/30 w-full transition-shadow"
-              />
-            </div>
-          </div>
-
+        <form id="signinForm" class="space-y-5 mt-8" novalidate>
           <div>
             <label
               for="email"
@@ -223,90 +188,45 @@
             />
           </div>
 
-          <div class="gap-5 grid sm:grid-cols-2">
-            <div>
-              <label
-                for="city"
-                class="block mb-1.5 font-semibold text-forest-900 text-sm"
-                >City</label
-              >
-              <select
-                id="city"
-                name="city"
-                required
-                class="bg-white px-4 py-3 border border-leaf-300/70 focus:border-leaf-500 rounded-xl focus:outline-none focus:ring-4 focus:ring-leaf-400/30 w-full transition-shadow"
-              >
-                <option value="" disabled selected>Select your city</option>
-                <option>Lahore</option>
-                <option>Karachi</option>
-                <option>Islamabad</option>
-                <option>Faisalabad</option>
-                <option>Multan</option>
-                <option>Peshawar</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div>
-              <label
-                for="role"
-                class="block mb-1.5 font-semibold text-forest-900 text-sm"
-                >I want to</label
-              >
-              <select
-                id="role"
-                name="role"
-                required
-                class="bg-white px-4 py-3 border border-leaf-300/70 focus:border-leaf-500 rounded-xl focus:outline-none focus:ring-4 focus:ring-leaf-400/30 w-full transition-shadow"
-              >
-                <option value="" disabled selected>Choose one</option>
-                <option>Volunteer at drives</option>
-                <option>Report bare spots</option>
-                <option>Organize a drive</option>
-                <option>Donate saplings</option>
-              </select>
-            </div>
-          </div>
-
           <div>
-            <label
-              for="password"
-              class="block mb-1.5 font-semibold text-forest-900 text-sm"
-              >Password</label
-            >
+            <div class="flex justify-between items-center mb-1.5">
+              <label
+                for="password"
+                class="block font-semibold text-forest-900 text-sm"
+                >Password</label
+              >
+              <a
+                href="#"
+                class="font-semibold text-skyblue-600 text-xs hover:underline"
+                >Forgot password?</a
+              >
+            </div>
             <input
               id="password"
               name="password"
               type="password"
               required
               minlength="8"
-              placeholder="At least 8 characters"
+              placeholder="Enter your password"
               class="px-4 py-3 border border-leaf-300/70 focus:border-leaf-500 rounded-xl focus:outline-none focus:ring-4 focus:ring-leaf-400/30 w-full transition-shadow"
             />
           </div>
 
-          <label
-            class="flex items-start gap-3 text-forest-800/80 text-sm leading-snug"
-          >
+          <label class="flex items-center gap-3 text-forest-800/80 text-sm">
             <input
               type="checkbox"
-              id="terms"
-              name="terms"
-              required
-              class="mt-1 border-leaf-300 rounded focus:ring-leaf-400 w-4 h-4 text-leaf-500"
+              id="remember"
+              name="remember"
+              class="border-leaf-300 rounded focus:ring-leaf-400 w-4 h-4 text-leaf-500"
             />
-            <span
-              >I agree to be contacted about planting drives and to the
-              <a href="#" class="font-medium text-skyblue-600 hover:underline"
-                >terms of participation</a
-              >.</span
-            >
+            <span>Keep me signed in</span>
           </label>
 
           <button
             type="submit"
             class="bg-skyblue-600 hover:bg-skyblue-700 shadow-lg shadow-skyblue-600/20 py-3.5 rounded-full w-full font-semibold text-white transition-colors"
           >
-            Create account
+            Sign in
           </button>
 
           <p
@@ -314,12 +234,18 @@
             class="hidden font-medium text-sm text-center"
           ></p>
 
+          <div class="flex items-center gap-3 pt-1">
+            <span class="flex-1 bg-leaf-300/60 h-px"></span>
+            <span class="text-forest-800/50 text-xs">or</span>
+            <span class="flex-1 bg-leaf-300/60 h-px"></span>
+          </div>
+
           <p class="text-forest-800/70 text-sm text-center">
-            Already signed up?
+            New to Green Pakistan?
             <a
-              href="signin.html"
+              href="signup.html"
               class="font-semibold text-skyblue-600 hover:underline"
-              >Log in</a
+              >Create an account</a
             >
           </p>
         </form>
@@ -346,11 +272,10 @@
     </footer>
 
     <script>
-      const form = document.getElementById("signupForm");
+      const form = document.getElementById("signinForm");
       const message = document.getElementById("formMessage");
 
-      // mark fields as touched on blur so invalid styling only shows after interaction
-      form.querySelectorAll("input, select").forEach((field) => {
+      form.querySelectorAll("input").forEach((field) => {
         field.addEventListener("blur", () =>
           field.setAttribute("data-touched", "true"),
         );
@@ -360,18 +285,14 @@
         e.preventDefault();
         if (!form.checkValidity()) {
           form
-            .querySelectorAll("input, select")
+            .querySelectorAll("input")
             .forEach((field) => field.setAttribute("data-touched", "true"));
-          message.textContent = "Please fill in all required fields correctly.";
+          message.textContent = "Please enter a valid email and password.";
           message.className = "text-center text-sm font-medium text-red-500";
           return;
         }
-        message.textContent = `Welcome aboard, ${form.fullName.value.split(" ")[0]}! Check your email to confirm your account.`;
+        message.textContent = "Signed in! Redirecting to your dashboard…";
         message.className = "text-center text-sm font-medium text-leaf-500";
-        form.reset();
-        form
-          .querySelectorAll("[data-touched]")
-          .forEach((f) => f.removeAttribute("data-touched"));
       });
     </script>
   </body>
